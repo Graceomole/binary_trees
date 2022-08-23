@@ -15,6 +15,12 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 	{
 		return (NULL);
 	}
+	if (parent == NULL)
+	{
+		free(new_tree);
+		return (NULL);
+	}
+
 
 	new_tree->n = value;
 	new_tree->left = NULL;
