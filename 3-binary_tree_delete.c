@@ -9,17 +9,17 @@
  */
 void binary_tree_delete(binary_tree_t *tree)
 {
-	binary_tree_t *nodeleft = tree->left;
-	binary_tree_t *noderighrt = tree->right;
-	if (tree == NULL)
-	{
-		;
-	}
-	else
-	{
-		free(tree);
-	}
-
-	binary_tree_delete(nodeleft);
-	binary_tree_delete(noderighrt);
+    binary_tree_t *node = tree;
+    binary_tree_t *ptr[3];
+    ptr[0] = tree;
+    while (ptr[0] != NULL)
+    {
+        node = ptr[0];
+        ptr[1] = node->left;
+        ptr[2] = node->right;
+        ptr[0] = ptr[1];
+        ptr[1] = ptr[2];
+        free(node);
+    }
+    
 }
