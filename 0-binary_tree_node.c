@@ -14,7 +14,7 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 
 	if (new_tree == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
 	new_tree->n = value;
 	new_tree->left = NULL;
@@ -27,5 +27,5 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	{
 		new_tree->parent = parent;
 	}
-	return new_tree;
+	return (new_tree);
 }
