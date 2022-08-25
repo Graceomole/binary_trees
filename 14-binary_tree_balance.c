@@ -6,7 +6,7 @@
  * @tree: a pointer to the root node of the tree to traverse
  * Return: size_t
  */
-int binary_tree_height(const binary_tree_t *tree)
+int binary_tree_heightl(const binary_tree_t *tree)
 {
 	int left, right;
 
