@@ -8,6 +8,21 @@
  */
 size_t binary_tree_depth(const binary_tree_t *tree)
 {
-	printf("loop)";
-	return (0);
+	binary_tree_t *current;
+	size_t height = 0;
+	
+	if (tree == NULL)
+	{
+		return (0);
+	}
+	else
+	{
+		current = tree->parent;
+		while (current != NULL)
+		{
+			height += 1;
+			current = current->parent;
+		}
+	}
+	return (height);
 }
