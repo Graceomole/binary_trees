@@ -26,14 +26,14 @@ size_t binary_tree_height(const binary_tree_t *tree)
 			if (leftheight > rightheight)
 			{
 				max = leftheight + 1;
-				return max;
+				return (max);
 			}
 			else
 			{
 				max = rightheight + 1;
-				return max;
+				return (max);
 			}
 		}
 	}
-	return 0;
+	return (0);
 }
